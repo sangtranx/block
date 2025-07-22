@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771aa504be841e04e9f6c97aa06d29a5, type: 3}
+  m_Name: SkinBlockSO
+  m_EditorClassIdentifier: 
+  lstSkinBlock:
+  - SkinType: 0
+    lstSprIcon:
+    - id: 0
+      sprBlock: {fileID: 21300000, guid: a78248f3ba1a317429aa4ac5cbf6e22a, type: 3}
+    - id: 1
+      sprBlock: {fileID: 21300000, guid: 669240848030c834b9b8a02d933da926, type: 3}
+    - id: 2
+      sprBlock: {fileID: 21300000, guid: f41ad707712b53f41a63e2983c706917, type: 3}
+    - id: 3
+      sprBlock: {fileID: 21300000, guid: 2ea0182d431b88e4cb5c99ded7ae1646, type: 3}
+    - id: 4
+      sprBlock: {fileID: 21300000, guid: 6f842d8f665ddb64aa81bde46eeac786, type: 3}
+    - id: 5
+      sprBlock: {fileID: 21300000, guid: 39d89b1a107549e4d86278f601cf330a, type: 3}
+    - id: 6
+      sprBlock: {fileID: 21300000, guid: 8de3312a8dce24d4d8ace3573f5b394f, type: 3}
+    - id: 7
+      sprBlock: {fileID: 21300000, guid: d8ef0952991939c438365eb0ea71efe0, type: 3}
+    - id: 8
+      sprBlock: {fileID: 21300000, guid: 3016b7044f0e0ba42a78cf8b6fab3d85, type: 3}
+    - id: 9
+      sprBlock: {fileID: 21300000, guid: c9ea7b1d6235aec46b0a8e73d13f490a, type: 3}
+    lstCell:
+    - id: 0
+      sprBlock: {fileID: 21300000, guid: 3c5d6d026321b394bbc34c5673b94c14, type: 3}
+    - id: 1
+      sprBlock: {fileID: 21300000, guid: 31a6be284434a3c48bfe7f6e35b8dd73, type: 3}
+  - SkinType: 1
+    lstSprIcon:
+    - id: 0
+      sprBlock: {fileID: 21300000, guid: 91b915384e7676e44aa34f0be640ed89, type: 3}
+    - id: 1
+      sprBlock: {fileID: 21300000, guid: 6ca00282e7ecc734a8904585fde91260, type: 3}
+    - id: 2
+      sprBlock: {fileID: 21300000, guid: 23c2e43ebb6796940818ec0ecc64f7df, type: 3}
+    - id: 3
+      sprBlock: {fileID: 21300000, guid: 7d9485613be3e2346bbc8fded3476378, type: 3}
+    - id: 4
+      sprBlock: {fileID: 21300000, guid: 2e8b84d121738e947982235aa7b7ec1d, type: 3}
+    - id: 5
+      sprBlock: {fileID: 21300000, guid: 74105a50169bbce4db45cac8c7530dbf, type: 3}
+    - id: 6
+      sprBlock: {fileID: 21300000, guid: 8fe574dc649318f47890e9d0d14a2c3f, type: 3}
+    - id: 7
+      sprBlock: {fileID: 21300000, guid: ce71ac04d31343c49a20476622e5d4db, type: 3}
+    - id: 8
+      sprBlock: {fileID: 21300000, guid: a5756e48493d85f428d261451d6883ac, type: 3}
+    - id: 9
+      sprBlock: {fileID: 21300000, guid: 01da976f83805a04d8a3a96ee2535929, type: 3}
+    lstCell:
+    - id: 0
+      sprBlock: {fileID: 21300000, guid: d0f551c714784ce4b91f74e1aeea46f8, type: 3}
+    - id: 1
+      sprBlock: {fileID: 21300000, guid: 91dd09cc62061774a90def29424b84c8, type: 3}
+  - SkinType: 2
+    lstSprIcon:
+    - id: 0
+      sprBlock: {fileID: 21300000, guid: 66a30e18257372f438d37c59e354d0ca, type: 3}
+    - id: 1
+      sprBlock: {fileID: 21300000, guid: 09b630c73906e4d41ac1b0a211ddf288, type: 3}
+    - id: 2
+      sprBlock: {fileID: 21300000, guid: 7f902c67a789b514d8cb96cbf1735f7d, type: 3}
+    - id: 3
+      sprBlock: {fileID: 21300000, guid: a59db2b6cbdf2aa4d9c82dd5ad36df4a, type: 3}
+    - id: 4
+      sprBlock: {fileID: 21300000, guid: e0375e61b17ab8949906d56902dc5d54, type: 3}
+    - id: 5
+      sprBlock: {fileID: 21300000, guid: 9a6f0e12c5ce795428fc042ab3ba6736, type: 3}
+    - id: 6
+      sprBlock: {fileID: 21300000, guid: 92c0cd9122dd4314387350c708742767, type: 3}
+    - id: 7
+      sprBlock: {fileID: 21300000, guid: 455849fb2225fc74aa17abb2006a86ad, type: 3}
+    - id: 8
+      sprBlock: {fileID: 21300000, guid: 61eafd29a28208642be416973e6c7734, type: 3}
+    - id: 9
+      sprBlock: {fileID: 21300000, guid: 607472bf349bfaa48871272ecdb33869, type: 3}
+    lstCell:
+    - id: 0
+      sprBlock: {fileID: 21300000, guid: f2951e937daa1854c8d0b64d98571d76, type: 3}
+    - id: 1
+      sprBlock: {fileID: 21300000, guid: 789dd0c9df24ce84fb2fe48fcb98c192, type: 3}
+  - SkinType: 3
+    lstSprIcon:
+    - id: 0
+      sprBlock: {fileID: 21300000, guid: 59eca786aca23f7488006d5f874872b4, type: 3}
+    - id: 1
+      sprBlock: {fileID: 21300000, guid: e2c34b75b69d9b141918e48b426746d4, type: 3}
+    - id: 2
+      sprBlock: {fileID: 21300000, guid: 3a4218b3b250cf6489418a833b1c53b6, type: 3}
+    - id: 3
+      sprBlock: {fileID: 21300000, guid: f704bf7c015ce3e4b9f811e247293339, type: 3}
+    - id: 4
+      sprBlock: {fileID: 21300000, guid: b27cdb36e2b16c3458c33438ff93d8a2, type: 3}
+    - id: 5
+      sprBlock: {fileID: 21300000, guid: 833b77ba358485b43986e5268a9a93b3, type: 3}
+    - id: 6
+      sprBlock: {fileID: 21300000, guid: 2816a3922f8efc94f87aa2fb11d6c456, type: 3}
+    - id: 7
+      sprBlock: {fileID: 21300000, guid: abb01d0779851984b8004653657df939, type: 3}
+    - id: 8
+      sprBlock: {fileID: 21300000, guid: b166885fa83607a46ae4405ed0bc2132, type: 3}
+    - id: 9
+      sprBlock: {fileID: 21300000, guid: 8118db544bd92ad4888200ddbd553edf, type: 3}
+    lstCell:
+    - id: 0
+      sprBlock: {fileID: 21300000, guid: d3477914af6cdf94bab3eabcc553de59, type: 3}
+    - id: 1
+      sprBlock: {fileID: 21300000, guid: 104adae786fd4524988789fdb9a25771, type: 3}

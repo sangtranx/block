@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_GAME/1-Scripts/GameHelper.cs.meta
+guid: ce26e9de7cef3ba4daa29da7e759025c
+========
+guid: f8429303d36c77b468f9e267adeafbd1
+>>>>>>>> origin/ui:Assets/_GAME/1-Scripts/Data/GameCache.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

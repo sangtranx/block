@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2366687377329834515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2366687377329834527}
+  - component: {fileID: 2366687377329834521}
+  - component: {fileID: 2366687377329834526}
+  m_Layer: 0
+  m_Name: LineBlockController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2366687377329834527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2366687377329834515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2366687377329834521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2366687377329834515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae48e74b8b9a15c468bce4afc772b276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineBlockView: {fileID: 2366687377329834526}
+--- !u!114 &2366687377329834526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2366687377329834515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c66d3f4dcecd9d469245858e9ee225a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgLine: {fileID: 0}
+  lstLineModel:
+  - id: 0
+    color: {r: 0.41176474, g: 0.24313727, b: 0.21960786, a: 1}
+  - id: 1
+    color: {r: 0.627451, g: 0.75294125, b: 0.15294118, a: 1}
+  - id: 2
+    color: {r: 0.91372555, g: 0.4666667, b: 0.82745105, a: 1}
+  - id: 3
+    color: {r: 0.43016508, g: 0.17354932, b: 0.9433962, a: 1}
+  - id: 4
+    color: {r: 0.83921576, g: 0.83921576, b: 0.83921576, a: 1}

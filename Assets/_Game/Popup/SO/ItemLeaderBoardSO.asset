@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5592f25bee6f47a4c9197ae3b0f349be, type: 3}
+  m_Name: ItemLeaderBoardSO
+  m_EditorClassIdentifier: 
+  itemLeaderBoard: {fileID: 499025827801685866, guid: 6caa0de713d298f40bb6def6725a35ff, type: 3}
+  itemLeaderBoardYour: {fileID: 499025827801685866, guid: 4806b06a8de4414489f665027566d972, type: 3}
+  lstSprLeaderBoardIcon:
+  - top: 1
+    sprIcon: {fileID: 21300000, guid: f1f4bd1e68a43bd4c8f3a3c67c951e83, type: 3}
+  - top: 2
+    sprIcon: {fileID: 21300000, guid: 4eaa2c1dd93540a4fb613fb8d08eefbd, type: 3}
+  - top: 3
+    sprIcon: {fileID: 21300000, guid: 9a055128f3e66824eac5f8b38fd6034d, type: 3}
+  - top: 4
+    sprIcon: {fileID: 21300000, guid: 770c1dbecda43ba4497ef49661835795, type: 3}
+  sprIconAvtDefault: {fileID: 21300000, guid: f06ad7d95880aeb4390666d238c096d0, type: 3}
