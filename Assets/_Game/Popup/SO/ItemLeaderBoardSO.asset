@@ -16,11 +16,11 @@ MonoBehaviour:
   itemLeaderBoardYour: {fileID: 499025827801685866, guid: 4806b06a8de4414489f665027566d972, type: 3}
   lstSprLeaderBoardIcon:
   - top: 1
-    sprIcon: {fileID: 21300000, guid: f1f4bd1e68a43bd4c8f3a3c67c951e83, type: 3}
+    sprIcon: {fileID: 21300008, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   - top: 2
-    sprIcon: {fileID: 21300000, guid: 4eaa2c1dd93540a4fb613fb8d08eefbd, type: 3}
+    sprIcon: {fileID: 21300010, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   - top: 3
-    sprIcon: {fileID: 21300000, guid: 9a055128f3e66824eac5f8b38fd6034d, type: 3}
+    sprIcon: {fileID: 21300012, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   - top: 4
-    sprIcon: {fileID: 21300000, guid: 770c1dbecda43ba4497ef49661835795, type: 3}
-  sprIconAvtDefault: {fileID: 21300000, guid: f06ad7d95880aeb4390666d238c096d0, type: 3}
+    sprIcon: {fileID: 21300006, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  sprIconAvtDefault: {fileID: 21300002, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
