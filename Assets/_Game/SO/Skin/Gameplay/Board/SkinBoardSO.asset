@@ -15,9 +15,3 @@ MonoBehaviour:
   lstSkin:
   - SkinType: 0
     sprItem: {fileID: 21300000, guid: c79d3b1cfd63d5347a0db23c1ee7f6e2, type: 3}
-  - SkinType: 1
-    sprItem: {fileID: 21300000, guid: d220997e4dde5d3498bdab21bc45eb9c, type: 3}
-  - SkinType: 2
-    sprItem: {fileID: 21300000, guid: 16a742c5942aaa24db98c25cfe8caa98, type: 3}
-  - SkinType: 3
-    sprItem: {fileID: 21300000, guid: b38b100d0083f9d49aa8fdc734610283, type: 3}

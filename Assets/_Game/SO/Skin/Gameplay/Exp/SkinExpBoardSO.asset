@@ -14,10 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lstSkin:
   - SkinType: 0
-    sprItem: {fileID: 21300000, guid: 44d8afd2acd0e184a8cff07639c6ad29, type: 3}
-  - SkinType: 1
-    sprItem: {fileID: 21300000, guid: d80036619cb21c14ea31e38e26bfb38a, type: 3}
-  - SkinType: 2
-    sprItem: {fileID: 21300000, guid: 805dcb3f26ae67640b76322530ec29f0, type: 3}
-  - SkinType: 3
-    sprItem: {fileID: 21300000, guid: 8bef0ef1d11d850488392646b37445fd, type: 3}
+    sprItem: {fileID: 21300046, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
