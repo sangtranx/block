@@ -17,16 +17,4 @@ MonoBehaviour:
   - name: Default
     skinType: 0
     price: 5000
-    sprItem: {fileID: 21300000, guid: f4264f87c2edda54ba1a328997484d54, type: 3}
-  - name: Cyberpunk
-    skinType: 1
-    price: 7000
-    sprItem: {fileID: 21300000, guid: f27ea6719066e1546b2bac3b4cf779db, type: 3}
-  - name: Kpop
-    skinType: 2
-    price: 11000
-    sprItem: {fileID: 21300000, guid: 69b34396ff1d34e42a97378fb4b723a3, type: 3}
-  - name: USA
-    skinType: 3
-    price: 25000
-    sprItem: {fileID: 21300000, guid: c7a9087c040e20c4ba075d4781a95480, type: 3}
+    sprItem: {fileID: 21300000, guid: 2bd21b175b95d2b43bc0ad892944aac2, type: 3}
