@@ -14,17 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - itemType: 5
-    icon: {fileID: 21300000, guid: 7b91d931baeac6c4dbc0242829bba222, type: 3}
-    price: 250
-  - itemType: 6
-    icon: {fileID: 21300000, guid: 5adc0c381a1cfc54981a233225e5e733, type: 3}
-    price: 500
-  - itemType: 7
-    icon: {fileID: 21300000, guid: 2ed456a5e1fb05541ad1278f00af0a24, type: 3}
+    icon: {fileID: -1483665779731714255, guid: 15bfc70256f3dbe4abc84ce6ffacf11c, type: 3}
     price: 250
   - itemType: 8
-    icon: {fileID: 21300000, guid: dc3c9e406ebea8649a76cbd4ec5223e6, type: 3}
+    icon: {fileID: -7213742777133032008, guid: 0e97f32679693fb42816be9a80e0254b, type: 3}
     price: 250
   - itemType: 9
-    icon: {fileID: 1390202906, guid: ed096fa321f49a84b943a68addd7c99b, type: 3}
+    icon: {fileID: -3092956421908063085, guid: 9165684ccdf1afe45b06edbd1d7632ea, type: 3}
     price: 200
+  - itemType: 0
+    icon: {fileID: -3338749442709606003, guid: 93978dcbff65c754c82f146ed36c1c45, type: 3}
+    price: 0

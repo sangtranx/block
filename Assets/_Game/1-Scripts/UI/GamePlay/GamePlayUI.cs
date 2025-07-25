@@ -74,6 +74,7 @@ public class GamePlayUI : MonoBehaviour
             GameEvent.onShowPopup?.Invoke(popupReplay);
         });
 
+        btnShop.gameObject.SetActive(false);
         btnShop.onClick.RemoveAllListeners();
         btnShop.onClick.AddListener(() =>
         {
