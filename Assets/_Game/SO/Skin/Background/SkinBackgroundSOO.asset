@@ -15,6 +15,18 @@ MonoBehaviour:
   lstCharacterShop:
   - shopCategory: 2
     characterSkins:
+    - skinType: 0
+      sprSkin: {fileID: 6395675461651899157, guid: 195057a5f34064dc4bdd1b5324fa5d1d, type: 3}
+      animator: {fileID: 9100000, guid: 5ed99de2412029a43a6183b239d10ac4, type: 2}
+    - skinType: 1
+      sprSkin: {fileID: 21300000, guid: 42ed9ed99043142839990173d869753d, type: 3}
+      animator: {fileID: 9100000, guid: 5ed99de2412029a43a6183b239d10ac4, type: 2}
     - skinType: 2
-      sprSkin: {fileID: 21300000, guid: 17aa86b80bf625b4f8119593e53bb50e, type: 3}
+      sprSkin: {fileID: 7367778317301675670, guid: d2524b988326e4f8baf1787e0ecd0d97, type: 3}
+      animator: {fileID: 9100000, guid: 5ed99de2412029a43a6183b239d10ac4, type: 2}
+    - skinType: 3
+      sprSkin: {fileID: 2872120086128280508, guid: 240d742e597e14709b10b4032731ff16, type: 3}
+      animator: {fileID: 9100000, guid: 5ed99de2412029a43a6183b239d10ac4, type: 2}
+    - skinType: 4
+      sprSkin: {fileID: -5621041003406422230, guid: fde5965007fd74cad9734da80ccc86fe, type: 3}
       animator: {fileID: 9100000, guid: 5ed99de2412029a43a6183b239d10ac4, type: 2}

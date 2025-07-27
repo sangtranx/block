@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: SkinBackgroundSO
   m_EditorClassIdentifier: 
   lstSkin:
-  - SkinType: 0
-    sprItem: {fileID: -2808958346383863656, guid: 096850a21c881704988ae721d4033773, type: 3}
+  - SkinType: 1
+    sprItem: {fileID: 21300000, guid: 42ed9ed99043142839990173d869753d, type: 3}
+  - SkinType: 2
+    sprItem: {fileID: 7367778317301675670, guid: d2524b988326e4f8baf1787e0ecd0d97, type: 3}
+  - SkinType: 3
+    sprItem: {fileID: 2872120086128280508, guid: 240d742e597e14709b10b4032731ff16, type: 3}
+  - SkinType: 4
+    sprItem: {fileID: -5621041003406422230, guid: fde5965007fd74cad9734da80ccc86fe, type: 3}
