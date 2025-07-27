@@ -9,67 +9,68 @@ using UnityEngine.UI;
 
 public class PopupBase : MonoBehaviour
 {
-    [SerializeField] protected PopupType popupType;
-    [SerializeField] protected Image imgFade;
-    [SerializeField] protected RectTransform rtfmPopup;
-    [SerializeField] protected Button btnFadeClose;
-    [SerializeField] float targetYAnchorPosition;
-    public Action externalShowComplete;
-    public Action externalShow;
-    public Action externalHideComplete;
-    public Action externalHide;
-    protected PopupModel popupModel;
-    private float timer = 0.5f;
+  [SerializeField] protected PopupType popupType;
+  [SerializeField] protected Image imgFade;
+  [SerializeField] protected RectTransform rtfmPopup;
+  [SerializeField] protected Button btnFadeClose;
+  [SerializeField] float targetYAnchorPosition;
+  [SerializeField] private float fadeValue = 0.8f;
+  public Action externalShowComplete;
+  public Action externalShow;
+  public Action externalHideComplete;
+  public Action externalHide;
+  protected PopupModel popupModel;
+  private float timer = 0.5f;
 
-    public PopupType PopupType { get => popupType; }
+  public PopupType PopupType { get => popupType; }
 
-    public virtual void InitPopup()
+  public virtual void InitPopup()
+  {
+    imgFade.color = new Color(0, 0, 0, 0.8f);
+    rtfmPopup.anchoredPosition = new Vector2(0, Screen.height * 2);
+    SetStatusPopup(false);
+    InitCloseFade();
+    externalShow += () => GameManager.Instance.StateGame = StateGame.Pause;
+    externalHideComplete += () => GameManager.Instance.StateGame = StateGame.Play;
+  }
+
+  protected virtual void InitCloseFade()
+  {
+    btnFadeClose.onClick.RemoveAllListeners();
+    btnFadeClose.onClick.AddListener(() =>
     {
-        imgFade.color = new Color(0, 0, 0, 0.8f);
-        rtfmPopup.anchoredPosition = new Vector2(0, Screen.height * 2);
-        SetStatusPopup(false);
-        InitCloseFade();
-        externalShow += () => GameManager.Instance.StateGame = StateGame.Pause;
-        externalHideComplete += () => GameManager.Instance.StateGame = StateGame.Play;
-    }
+      HidePopup();
+    });
+  }
 
-    protected virtual void InitCloseFade()
+  public virtual void ShowPopup(PopupModel popupModel = null, UnityAction onShowComplete = null)
+  {
+    this.popupModel = popupModel;
+    SetStatusPopup(true);
+    imgFade.DOFade(fadeValue, timer).SetLink(gameObject);
+    externalShow?.Invoke();
+    rtfmPopup.DOAnchorPosY(targetYAnchorPosition, timer).OnComplete(() =>
     {
-        btnFadeClose.onClick.RemoveAllListeners();
-        btnFadeClose.onClick.AddListener(() =>
-        {
-            HidePopup();
-        });
-    }
+      onShowComplete?.Invoke();
+      this.externalShowComplete?.Invoke();
+    }).SetLink(gameObject);
+  }
 
-    public virtual void ShowPopup(PopupModel popupModel = null, UnityAction onShowComplete = null)
+  public virtual void HidePopup(UnityAction onHideComplete = null)
+  {
+    externalHide?.Invoke();
+    imgFade.DOFade(0, timer).SetLink(gameObject);
+    rtfmPopup.DOAnchorPosY(Screen.height * 2, timer).OnComplete(() =>
     {
-        this.popupModel = popupModel;
-        SetStatusPopup(true);
-        imgFade.DOFade(0.8f, timer).SetLink(gameObject);
-        externalShow?.Invoke();
-        rtfmPopup.DOAnchorPosY(targetYAnchorPosition, timer).OnComplete(() =>
-        {
-            onShowComplete?.Invoke();
-            this.externalShowComplete?.Invoke();
-        }).SetLink(gameObject);
-    }
+      SetStatusPopup(false);
+      onHideComplete?.Invoke();
+      this.externalHideComplete?.Invoke();
+    }).SetLink(gameObject);
+  }
 
-    public virtual void HidePopup(UnityAction onHideComplete = null)
-    {
-        externalHide?.Invoke();
-        imgFade.DOFade(0, timer).SetLink(gameObject);
-        rtfmPopup.DOAnchorPosY(Screen.height * 2, timer).OnComplete(() =>
-        {
-            SetStatusPopup(false);
-            onHideComplete?.Invoke();
-            this.externalHideComplete?.Invoke();
-        }).SetLink(gameObject);
-    }
-
-    private void SetStatusPopup(bool status)
-    {
-        rtfmPopup.gameObject.SetActive(status);
-        imgFade.gameObject.SetActive(status);
-    }
+  private void SetStatusPopup(bool status)
+  {
+    rtfmPopup.gameObject.SetActive(status);
+    imgFade.gameObject.SetActive(status);
+  }
 }
