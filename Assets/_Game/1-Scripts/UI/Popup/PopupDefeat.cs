@@ -12,147 +12,83 @@ using UnityEngine.UI;
 
 public class PopupDefeat : PopupBase
 {
-    private DefeatController crtl;
+  private DefeatController crtl;
 
-    public DefeatController Ctrl
+  public DefeatController Ctrl
+  {
+    get
     {
-        get
-        {
-            if (crtl == null)
-            {
-                crtl = GetComponent<DefeatController>();
-            }
+      if (crtl == null)
+      {
+        crtl = GetComponent<DefeatController>();
+      }
 
-            return crtl;
-        }
+      return crtl;
     }
+  }
 
-    [SerializeField] private Button btnHome;
-    [SerializeField] private Button btnReplay;
-    [SerializeField] Image chestBackground;
-    [SerializeField] Image chestFill;
-    [SerializeField] Image chestOpen;
+  [SerializeField] private Button btnReplay;
 
-    [SerializeField] TextMeshProUGUI txChestProgress;
 
-    //===============================================
-    /// <summary>
-    /// Khi full % chest, sẽ show số vàng nhận được
-    /// </summary>
-    [SerializeField] GameObject ChestRewardShow;
+  //===============================================
+  /// <summary>
+  /// Khi full % chest, sẽ show số vàng nhận được
+  /// </summary>
 
-    [SerializeField] TextMeshProUGUI txGoldReward;
-    [SerializeField] Button btnOkReward;
 
-    [SerializeField] Button btnOkRewardAdsX2;
+  //================================================
+  private UserData userData => DBController.Instance.USER_DATA;
 
-    //================================================
-    private UserData userData => DBController.Instance.USER_DATA;
+  public override void InitPopup()
+  {
+    base.InitPopup();
+    InitBtn();
+  }
 
-    public override void InitPopup()
-    {
-        base.InitPopup();
-        InitBtn();
-    }
-    
 
-    private void InitBtn()
-    {
-        btnHome.onClick.RemoveAllListeners();
-        btnHome.onClick.AddListener(() => Home());
+  private void InitBtn()
+  {
 
-        btnReplay.onClick.RemoveAllListeners();
-        btnReplay.onClick.AddListener(() => Replay());
+    btnReplay.onClick.RemoveAllListeners();
+    btnReplay.onClick.AddListener(() => Replay());
+  }
 
-        btnOkReward.onClick.RemoveAllListeners();
-        btnOkReward.onClick.AddListener(() =>
-        {
-            Ctrl.GetDefeatReward();
-            // ChestRewardShow.SetActive(false);
-            LoadingSceneController.Instance.ChangeScene((SceneType.GamePlay));
-        });
+  public override void ShowPopup(PopupModel popupModel = null, UnityAction onShowComplete = null)
+  {
+    btnReplay.gameObject.SetActive(false);
+    base.ShowPopup(popupModel, onShowComplete);
+    btnFadeClose.interactable = false;
+    //Vì mỗi lần thua +chestPercent% nên trừ chestPercent% để lerp từ trước đó đến hiện tại
+  }
 
-        btnOkRewardAdsX2.onClick.RemoveAllListeners();
-        btnOkRewardAdsX2.onClick.AddListener(() =>
-        {
-            Ctrl.GetDefeatRewardX2Ads();
-            // ChestRewardShow.SetActive(false);
-            LoadingSceneController.Instance.ChangeScene((SceneType.GamePlay));
-        });
-    }
+  /// <summary>
+  /// Tiến độ rương 
+  /// </summary>
+  public async void ShowResult()
+  {
+    float targetFillAmount = userData.GetResourceByType(TypeResource.DefeatChest).amount / 100f;
+    string textValue = $"{userData.GetResourceByType(TypeResource.DefeatChest).amount}%";
+  }
 
-    public override void ShowPopup(PopupModel popupModel = null, UnityAction onShowComplete = null)
-    {
-        btnHome.gameObject.SetActive(false);
-        btnReplay.gameObject.SetActive(false);
-        chestBackground.gameObject.SetActive(true);
-        chestFill.gameObject.SetActive(true);
-        chestOpen.gameObject.SetActive(false);
-        ChestRewardShow.SetActive(false);
-        base.ShowPopup(popupModel, onShowComplete);
-        btnFadeClose.interactable = false;
-        //Vì mỗi lần thua +chestPercent% nên trừ chestPercent% để lerp từ trước đó đến hiện tại
-        chestFill.fillAmount = (userData.GetResourceByType(TypeResource.DefeatChest).amount - Ctrl.chestPercent) / 100f;
-    }
+  void Home()
+  {
+    // HidePopup();
+    LoadingSceneController.Instance.ChangeScene(SceneType.GamePlay);
+  }
 
-    /// <summary>
-    /// Tiến độ rương 
-    /// </summary>
-    public async void ShowResult()
-    {
-        float targetFillAmount = userData.GetResourceByType(TypeResource.DefeatChest).amount / 100f;
-        string textValue = $"{userData.GetResourceByType(TypeResource.DefeatChest).amount}%";
-        await chestFill.DOFillAmount(targetFillAmount, 2f)
-            .SetEase(Ease.Linear)
-            .OnPlay(() =>
-            {
-                GameEvent.onResourceGonnaChange?.Invoke(userData.GetResourceByType(TypeResource.DefeatChest).amount -
-                                                        Ctrl.chestPercent);
-                GameHelper.Instance.ValueDisplayUI.LerpValue(
-                    userData.GetResourceByType(TypeResource.DefeatChest).amount, txChestProgress, string.Empty, "%", 2);
-            }).ToUniTask();
-        await Animation();
-    }
+  void Replay()
+  {
+    // HidePopup();
+    LoadingSceneController.Instance.ChangeScene(SceneType.GamePlay);
+  }
 
-    void Home()
-    {
-        // HidePopup();
-        LoadingSceneController.Instance.ChangeScene(SceneType.GamePlay);
-    }
+  private async UniTask Animation()
+  {
+  }
 
-    void Replay()
-    {
-        // HidePopup();
-        LoadingSceneController.Instance.ChangeScene(SceneType.GamePlay);
-    }
-
-    private async UniTask Animation()
-    {
-        var deltaTime = TimeSpan.FromSeconds(0.1f);
-        if (Ctrl.canRewardChest)
-        {
-            Debug.Log("Animation Play");
-            // GameEvent.onResourceGonnaChange?.Invoke(10000);
-            GameHelper.Instance.ValueDisplayUI.LerpValue(Ctrl.goldRewardFromChest, txGoldReward, "+");
-            chestBackground.gameObject.SetActive(false);
-            chestFill.gameObject.SetActive(false);
-            chestOpen.gameObject.SetActive(true);
-            ChestRewardShow.SetActive(true);
-            Ctrl.canRewardChest = false;
-            txGoldReward.gameObject.SetActive(false);
-            await UniTask.Delay(deltaTime);
-        }
-
-        Debug.Log("Enable Button");
-        btnFadeClose.interactable = true;
-        // btnHome.gameObject.SetActive(true);
-        btnReplay.gameObject.SetActive(true);
-        txGoldReward.gameObject.SetActive(true);
-    }
-
-    protected override void InitCloseFade()
-    {
-        btnFadeClose.onClick.RemoveAllListeners();
-        btnFadeClose.onClick.AddListener(() => { Debug.Log("Replay"); });
-    }
+  protected override void InitCloseFade()
+  {
+    btnFadeClose.onClick.RemoveAllListeners();
+    btnFadeClose.onClick.AddListener(() => { Debug.Log("Replay"); });
+  }
 }
