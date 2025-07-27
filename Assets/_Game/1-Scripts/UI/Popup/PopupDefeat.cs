@@ -55,7 +55,7 @@ public class PopupDefeat : PopupBase
 
   public override void ShowPopup(PopupModel popupModel = null, UnityAction onShowComplete = null)
   {
-    btnReplay.gameObject.SetActive(false);
+    btnReplay.gameObject.SetActive(true);
     base.ShowPopup(popupModel, onShowComplete);
     btnFadeClose.interactable = false;
     //Vì mỗi lần thua +chestPercent% nên trừ chestPercent% để lerp từ trước đó đến hiện tại
