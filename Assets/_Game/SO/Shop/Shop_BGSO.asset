@@ -17,12 +17,20 @@ MonoBehaviour:
   - name: Default
     skinType: 0
     price: 5000
-    sprItem: {fileID: 21300000, guid: f3a47659a7e2d4f428668398e7c24b16, type: 3}
+    sprItem: {fileID: 6395675461651899157, guid: 195057a5f34064dc4bdd1b5324fa5d1d, type: 3}
   - name: Clown
     skinType: 1
     price: 10000
-    sprItem: {fileID: 21300000, guid: f3a47659a7e2d4f428668398e7c24b16, type: 3}
+    sprItem: {fileID: 21300000, guid: 42ed9ed99043142839990173d869753d, type: 3}
   - name: Dragon
     skinType: 2
     price: 20000
-    sprItem: {fileID: 21300000, guid: f3a47659a7e2d4f428668398e7c24b16, type: 3}
+    sprItem: {fileID: 7367778317301675670, guid: d2524b988326e4f8baf1787e0ecd0d97, type: 3}
+  - name: 
+    skinType: 3
+    price: 25000
+    sprItem: {fileID: 2872120086128280508, guid: 240d742e597e14709b10b4032731ff16, type: 3}
+  - name: 
+    skinType: 4
+    price: 30000
+    sprItem: {fileID: -5621041003406422230, guid: fde5965007fd74cad9734da80ccc86fe, type: 3}
