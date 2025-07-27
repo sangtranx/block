@@ -308,6 +308,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 188873006468798303, guid: cb524b9a64f2f4743b46b7a37f1921e8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c133da0f3e16184d9d0361e76029cec, type: 3}
     - target: {fileID: 7105104143752255561, guid: cb524b9a64f2f4743b46b7a37f1921e8, type: 3}
       propertyPath: m_Padding.m_Top
       value: 15
