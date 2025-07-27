@@ -195,6 +195,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1807802927183318475, guid: 9e7b76db7ee91a34b88d5d41394d450a, type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
     - target: {fileID: 1807802928723550905, guid: 9e7b76db7ee91a34b88d5d41394d450a, type: 3}
       propertyPath: m_Name
       value: LoadingScreen
