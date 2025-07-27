@@ -16,25 +16,21 @@ MonoBehaviour:
   - SkinType: 0
     lstSprIcon:
     - id: 0
-      sprBlock: {fileID: 21300000, guid: 5938bd5d018267a45aa0962f00fbabe7, type: 3}
+      sprBlock: {fileID: 21300000, guid: c2f38c4522c6cb2418e1e818cede3cdb, type: 3}
     - id: 1
-      sprBlock: {fileID: 21300000, guid: d9c311d7992686046ad97297f5aaf0b7, type: 3}
+      sprBlock: {fileID: 21300000, guid: a87daf7c2c8a4434c8d575f0954a5802, type: 3}
     - id: 2
-      sprBlock: {fileID: 21300000, guid: 7c51fa8c40119844ca26740434a3f21f, type: 3}
+      sprBlock: {fileID: 21300000, guid: a87daf7c2c8a4434c8d575f0954a5802, type: 3}
     - id: 3
-      sprBlock: {fileID: 21300000, guid: 0e00e22c2302c4c429576e0e04ff4834, type: 3}
+      sprBlock: {fileID: 21300000, guid: dab7bb03307bf1f4aae63ff87a0a6dd1, type: 3}
     - id: 4
-      sprBlock: {fileID: 21300000, guid: aedb725fc2a139d4ba1384d06a0badd6, type: 3}
+      sprBlock: {fileID: 21300000, guid: 77d5df1666ec9af4eac2e164b4b087da, type: 3}
     - id: 5
-      sprBlock: {fileID: 21300000, guid: 0a42d22be67a37d4fa5bfc7470b1eb11, type: 3}
+      sprBlock: {fileID: 21300000, guid: e5064ab11d903d640a3f08b65fe22c08, type: 3}
     - id: 6
-      sprBlock: {fileID: 21300000, guid: 7749c9af80374474d81a825109302130, type: 3}
+      sprBlock: {fileID: 21300000, guid: 994cff2baf2ec4740a729c679b3716d6, type: 3}
     - id: 7
-      sprBlock: {fileID: 21300000, guid: 30ad029585b995642bae85f8a2a2c9ed, type: 3}
-    - id: 8
-      sprBlock: {fileID: 21300000, guid: 66eb32c73d649cd4f9fbd5f3e032498f, type: 3}
-    - id: 9
-      sprBlock: {fileID: 21300000, guid: d936b2b66ffb9f24397fdbcc17f4e754, type: 3}
+      sprBlock: {fileID: 21300000, guid: 5b3a1c4f2d2e1f846a6e76cd2c5aa23b, type: 3}
     lstCell:
     - id: 0
       sprBlock: {fileID: 21300000, guid: 31a6be284434a3c48bfe7f6e35b8dd73, type: 3}
