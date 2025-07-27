@@ -109,7 +109,6 @@ namespace Data
                     throw new UnityException(e.Message);
                 }
             }
-            GameEventLogin.onPostData?.Invoke();
         }
 
         public T LoadDataByKey<T>(string key)
@@ -178,12 +177,6 @@ namespace Data
             spinDB = LoadDataByKey<SpinDataDB>(DBKey.SPIN_DB);
         }
 
-        public void ApplyData(PayLoad payload)
-        {
-            USER_DATA = payload.userData;
-            SHOP_DB = payload.shopDB;
-            SPIN_DATA = payload.SpinDataDB;
-        }
         public void ClearData()
         {
             Initializing();
